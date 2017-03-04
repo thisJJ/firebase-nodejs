@@ -12,6 +12,10 @@ For insert data into firebase
 For delete data on firebase
 * updateData
 For update data on firebase
+* authUser
+For manage user on firebase
+* authFacebook
+For auth from facebook
 
 # How to use it ?
 
@@ -35,7 +39,7 @@ So you add my code on you another file for use firebase.
 # Examples
 ```js
 import firebase from './firebase.js'; //add you firebase.js path
-import { insertData, selectData, updateData, deleteData } from 'firebase-nodejs';
+import { insertData, selectData, updateData, deleteData, authUser, authFacebook } from 'firebase-nodejs';
 
 export class TestApp extends Component{
   constructor(props) {
@@ -69,6 +73,42 @@ export class TestApp extends Component{
 ```
 
 # Use another
+
+# authUser an authFacebook
+You can authen user from firebase, User facebook user loggin only.
+
+Get current user.
+
+```js
+const data = authUser.currentUser(firebase);
+```
+
+Logon by use facebook access token.
+```js
+const data = authFacebook(firebase, accessToken);
+```
+
+User data.
+```js
+let currentUserData = authUser.currentUser(firebase);
+currentUserData.name = 'new my name';
+const status = authUser.updateUser(firebase, currentUserData);
+```
+
+User email.
+```js
+const status = authUser.updateEmail(firebase, 'new_email@mail.com');
+```
+
+
+User delete.
+```js
+const status = authUser.deleteUser(firebase);
+```
+Logout !
+```js
+const status = authUser.logout(firebase);
+```
 
 # selectData
 
