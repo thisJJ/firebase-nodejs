@@ -7,7 +7,7 @@ export function currentUser(firebaseConfig){
     }
 }
 
-export function updateUser(firebaseConfig, data){
+export function updateUser(firebaseConfig,  ){
     const user = currentUser(firebaseConfig);
     user.updateProfile(data).then(function() {
         return true;
