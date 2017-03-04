@@ -1,0 +1,26 @@
+{
+  "name": "firebase-nodejs",
+  "version": "1.0.0",
+  "description": "Firebase core for Node.js",
+  "main": "service/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinnakrit/firebase-nodejs.git"
+  },
+  "keywords": [
+    "firebase",
+    "nodejs",
+    "sdk",
+    "service",
+    "firebase-nodejs"
+  ],
+  "author": "Thinnakrit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinnakrit/firebase-nodejs/issues"
+  },
+  "homepage": "https://github.com/thinnakrit/firebase-nodejs#readme"
+}
