@@ -45,7 +45,7 @@ So you add my code on you another file for use firebase.
 
 # Examples
 ```js
-import firebase from './firebase.js'; //add you firebase.js path
+import firebase from './firebase'; //add you firebase.js path
 import * as firebaseDom from 'firebase-nodejs';
 
 export class TestApp extends Component{
