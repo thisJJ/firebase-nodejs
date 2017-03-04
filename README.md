@@ -2,6 +2,11 @@
 
 # Firebase SDK for Node.js
 
+Get install !!
+```
+npm install --save firebase-nodejs
+```
+
 # Optionals
 
 * selectData 
