@@ -1,4 +1,6 @@
-## firebase-nodejs
+# firebase-nodejs
+
+![](http://i.imgur.com/fE0qM1l.jpg) ![](http://i.imgur.com/fE0qM1l.jpg)
 
 # Firebase SDK for Node.js
 
