@@ -5,7 +5,7 @@ export default function selectData(firebaseConfig, data_path, getFrom = 'value')
         if(val){
             return val;
         }else{
-            return falsel
+            return false;
         }
     });
 }
