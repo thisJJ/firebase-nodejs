@@ -6,7 +6,7 @@ import deleteData from '../module/delete';
 import authFacebook from '../module/authFacebook';
 import * as authUser from '../module/authUser';
 
-export default {
+export {
     firebaseConfig,
     insertData,
     selectData,
