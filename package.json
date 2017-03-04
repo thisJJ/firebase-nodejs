@@ -1,6 +1,6 @@
 {
   "name": "firebase-nodejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Firebase core for Node.js",
   "main": "service/index.js",
   "scripts": {
