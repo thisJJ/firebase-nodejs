@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/thinnakrit/firebase-nodejs/issues"
   },
-  "homepage": "https://github.com/thinnakrit/firebase-nodejs#readme"
+  "homepage": "https://github.com/thinnakrit/firebase-nodejs#readme",
+  "dependencies": {
+    "firebase": "^3.7.0"
+  }
 }
