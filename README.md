@@ -7,7 +7,7 @@ Get install !!
 npm install --save firebase-nodejs
 ```
 
-# Optionals
+## Optionals
 
 * selectData 
 For select data from firebase
@@ -22,10 +22,14 @@ For manage user on firebase
 * authFacebook
 For auth from facebook
 
-# How to use it ?
+## New update 5/3/2017
+* searchData => searchByValue
+You can use for search data by value
+
+## How to use it ?
 
 Create firebase.js on you app folder, and write code below.
-You can use data from you firebase project.
+You can use data from your firebase project.
 ```js
 import * as firebaseDom from 'firebase-nodejs';
 
@@ -41,7 +45,7 @@ export default firebase;
 
 So you add my code on you another file for use firebase.
 
-# Examples
+## Examples
 ```js
 import firebase from './firebase'; //add you firebase.js path
 import * as firebaseDom from 'firebase-nodejs';
@@ -77,10 +81,10 @@ export class TestApp extends Component{
 
 ```
 
-# Use another
+## Use another
 
-# authUser an authFacebook
-You can authen user from firebase, User facebook user loggin only.
+## authUser an authFacebook
+You can authen user from firebase, Use facebook  loggin only.
 
 Get current user.
 
@@ -115,14 +119,24 @@ Logout !
 const status = firebaseDom.default.authUser.logout(firebase);
 ```
 
-# selectData
+## searchData
+
+Search by value
+```js
+const searchKey = 'member_name';
+const searchValue = 'handdleName';
+const data = firebaseDom.default.searchData.searchByValue(firebase, '/member/id/', searchKey, searchValue)
+
+```
+
+## selectData
 
 ```js
 const data = firebaseDom.default.selectData(firebase, '/member/id/1', 'value')
 
 ```
 
-# insertData
+## insertData
 
 ```js
 const member = {
@@ -134,7 +148,7 @@ const insertStatus = firebaseDom.default.insertData(firebase, '/member/id/2', me
 ```
 
 
-# updateData
+## updateData
 
 ```js
 const member = {
@@ -145,7 +159,7 @@ const updateStatus = firebaseDom.default.updateData(firebase, '/member/id/2', me
 
 ```
 
-# deleteData
+## deleteData
 
 ```js
 const deleteStatus = firebaseDom.default.deleteData(firebase, '/member/id/2');
