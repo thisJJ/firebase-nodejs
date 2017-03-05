@@ -5,6 +5,7 @@ import updateData from '../module/update';
 import deleteData from '../module/delete';
 import authFacebook from '../module/authFacebook';
 import * as authUser from '../module/authUser';
+import * as searchData from '../module/search';
 
 export default {
     firebaseConfig,
@@ -13,5 +14,6 @@ export default {
     updateData,
     deleteData,
     authUser,
-    authFacebook
+    authFacebook,
+    searchData
 };
