@@ -150,6 +150,6 @@ const updateStatus = firebaseDom.default.updateData(firebase, '/member/id/2', me
 # deleteData
 
 ```js
-const deleteStatus = deleteData(firebase, '/member/id/2');
+const deleteStatus = firebaseDom.default.deleteData(firebase, '/member/id/2');
 
 ```
