@@ -1,6 +1,4 @@
-# firebase-nodejs
-
-![](http://i.imgur.com/fE0qM1l.jpg)
+# firebase-nodejs [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs.svg)](https://www.npmjs.com/package/firebase-nodejs)
 
 # Firebase SDK for Node.js
 
