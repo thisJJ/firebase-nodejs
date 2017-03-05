@@ -22,7 +22,7 @@ For manage user on firebase
 * authFacebook
 For auth from facebook
 
-## New update 5/3/2017
+### New update 5/3/2017
 * searchData => searchByValue
 You can use for search data by value
 
