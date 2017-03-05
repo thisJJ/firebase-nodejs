@@ -1,4 +1,4 @@
-# firebase-nodejs [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs.svg)](https://www.npmjs.com/package/firebase-nodejs)   [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs-version.svg)](https://www.npmjs.com/package/firebase-nodejs)
+# firebase-nodejs [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs.svg)](https://www.npmjs.com/package/firebase-nodejs)   [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs-version.svg)](https://www.npmjs.com/package/firebase-nodejs)   [![Build Status](https://thinnakrit.github.io/badge/firebase-version.svg)](https://www.npmjs.com/package/firebase-nodejs)
 
 # Firebase SDK for Node.js
 
