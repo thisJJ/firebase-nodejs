@@ -1,6 +1,6 @@
 # firebase-nodejs [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs.svg)](https://www.npmjs.com/package/firebase-nodejs)   [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs-version.svg)](https://www.npmjs.com/package/firebase-nodejs)   [![Build Status](https://thinnakrit.github.io/badge/firebase-version.svg)](https://www.npmjs.com/package/firebase-nodejs)
 
-# Fixed bugs `8/2/2017`
+#### Fixed bugs `8/2/2017`
 - [x] Add callback to the some function
 - [x] Remove default path
 
@@ -9,7 +9,7 @@ List function update, have a `callback` function
 - [x] authFacebook
 - [x] authUser `updateUser` `updateEmail` `sendVerifyEmail` `changePassword` `deleteUser` `logout`
 
-# Example new version updated.
+#### Example new version updated.
 
 Before updated : Have a error from return Promise, now edit.
 ```js
@@ -34,7 +34,12 @@ firebaseDom.selectData(firebase, data_path, 'value', callback => {
    });
 });
 ```
-
+#### Unit test
+```js
+selectData return callback : passed!
+authFacebook return callback : passed!
+authUser return callback : passed!
+```
 
 # Firebase SDK for Node.js
 
