@@ -1,5 +1,41 @@
 # firebase-nodejs [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs.svg)](https://www.npmjs.com/package/firebase-nodejs)   [![Build Status](https://thinnakrit.github.io/badge/firebase-nodejs-version.svg)](https://www.npmjs.com/package/firebase-nodejs)   [![Build Status](https://thinnakrit.github.io/badge/firebase-version.svg)](https://www.npmjs.com/package/firebase-nodejs)
 
+# Fixed bugs `8/2/2017`
+- [x] Add callback to the some function
+- [x] Remove default path
+
+List function update, have a `callback` function
+- [x] selectData
+- [x] authFacebook
+- [x] authUser `updateUser` `updateEmail` `sendVerifyEmail` `changePassword` `deleteUser` `logout`
+
+# Example new version updated.
+
+Before updated : Have a error from return Promise, now edit.
+```js
+firebaseDom.default.selectData(firebase, data_path, 'value');
+```
+
+New version : Remove default path.
+Before :
+```js
+firebaseDom.default.firebaseConfig
+```
+Now :
+```js
+firebaseDom.firebaseConfig
+```
+
+New version : Add callback function for return value from firebase query. But can't return out the function, you can use state from push on state.
+```js
+firebaseDom.selectData(firebase, data_path, 'value', callback => {
+   this.setState({
+      callback: callback,
+   });
+});
+```
+
+
 # Firebase SDK for Node.js
 
 Get install !!
@@ -39,7 +75,7 @@ var config = {
     databaseURL: '',
     storageBucket: '',
 };
-const firebase = firebaseDom.default.firebaseConfig(config);
+const firebase = firebaseDom.firebaseConfig(config);
 export default firebase;
 ```
 
@@ -59,15 +95,11 @@ export class TestApp extends Component{
   }
   
   getMemberData(){
-    let memberData = firebaseDom.default.selectData(firebase, '/member/id/1', 'value');
-    // if data is true function return your data, or no data function return false
-    if(memberData !== false){
-      this.setState({
-         member: memberData,
-      });
-    } else {
-      Alert('Not member !');
-    }
+    let memberData = firebaseDom.selectData(firebase, '/member/id/1', 'value', callback => {
+        this.setState({
+           member: callback,
+        });
+    });
   }
   
   render(){
@@ -89,34 +121,44 @@ You can authen user from firebase, Use facebook  loggin only.
 Get current user.
 
 ```js
-const data = firebaseDom.default.authUser.currentUser(firebase);
+const data = firebaseDom.authUser.currentUser(firebase);
 ```
 
 Logon by use facebook access token.
 ```js
-const data = firebaseDom.default.authFacebook(firebase, accessToken);
+firebaseDom.authFacebook(firebase, accessToken , callback => {
+    console.log(callback);
+});
 ```
 
 User data.
 ```js
-let currentUserData = firebaseDom.default.authUser.currentUser(firebase);
+let currentUserData = firebaseDom.authUser.currentUser(firebase);
 currentUserData.name = 'new my name';
-const status = firebaseDom.default.authUser.updateUser(firebase, currentUserData);
+firebaseDom.authUser.updateUser(firebase, currentUserData, callback => {
+    console.log(callback);
+});
 ```
 
 User email.
 ```js
-const status = firebaseDom.default.authUser.updateEmail(firebase, 'new_email@mail.com');
+firebaseDom.authUser.updateEmail(firebase, 'new_email@mail.com', callback => {
+    console.log(callback);
+});
 ```
 
 
 User delete.
 ```js
-const status = firebaseDom.default.authUser.deleteUser(firebase);
+firebaseDom.authUser.deleteUser(firebase, callback => {
+    console.log(callback);
+});
 ```
 Logout !
 ```js
-const status = firebaseDom.default.authUser.logout(firebase);
+firebaseDom.authUser.logout(firebase, callback => {
+    console.log(callback);
+});
 ```
 
 ## searchData
@@ -125,14 +167,18 @@ Search by value
 ```js
 const searchKey = 'member_name';
 const searchValue = 'handdleName';
-const data = firebaseDom.default.searchData.searchByValue(firebase, '/member/id/', searchKey, searchValue)
+firebaseDom.searchData.searchByValue(firebase, '/member/id/', searchKey, searchValue, callback => {
+    console.log(callback);
+})
 
 ```
 
 ## selectData
 
 ```js
-const data = firebaseDom.default.selectData(firebase, '/member/id/1', 'value')
+firebaseDom.selectData(firebase, '/member/id/1', 'value', callback => {
+    console.log(callback);
+});
 
 ```
 
@@ -143,7 +189,7 @@ const member = {
   name: 'test',
   age: 17,
 }
-const insertStatus = firebaseDom.default.insertData(firebase, '/member/id/2', member);
+const insertStatus = firebaseDom.insertData(firebase, '/member/id/2', member);
 
 ```
 
@@ -155,13 +201,13 @@ const member = {
   name: 'test',
   age: 18,
 }
-const updateStatus = firebaseDom.default.updateData(firebase, '/member/id/2', member);
+const updateStatus = firebaseDom.updateData(firebase, '/member/id/2', member);
 
 ```
 
 ## deleteData
 
 ```js
-const deleteStatus = firebaseDom.default.deleteData(firebase, '/member/id/2');
+const deleteStatus = firebaseDom.deleteData(firebase, '/member/id/2');
 
 ```
