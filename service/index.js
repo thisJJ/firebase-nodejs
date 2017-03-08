@@ -1,19 +1,23 @@
-import firebaseConfig from './core';
-import insertData from '../module/insert';
-import selectData from '../module/select';
-import updateData from '../module/update';
-import deleteData from '../module/delete';
-import authFacebook from '../module/authFacebook';
-import * as authUser from '../module/authUser';
-import * as searchData from '../module/search';
+// import firebaseConfig from './core';
+const firebaseConfig = require('./core');
+const insertData = require('../module/insert');
+const selectData = require('../module/select');
+const updateData = require('../module/update');
+const deleteData = require('../module/delete');
+const authFacebook = require('../module/authFacebook');
+const authUser = require('../module/authUser');
+const searchData = require('../module/search');
 
-export default {
-    firebaseConfig,
-    insertData,
-    selectData,
-    updateData,
-    deleteData,
-    authUser,
-    authFacebook,
-    searchData
+// import * as authUser from '../module/authUser';
+// import * as searchData from '../module/search';
+
+module.exports = {
+  firebaseConfig,
+  insertData,
+  selectData,
+  updateData,
+  deleteData,
+  authUser,
+  authFacebook,
+  searchData,
 };

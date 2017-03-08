@@ -1,7 +1,6 @@
-import * as firebase from "firebase";
+const firebase = require('firebase');
 
-
-export default function firebaseConfig(data){
+const firebaseConfig = (data) => {
     var config = {
         apiKey: data.apiKey,
         authDomain: data.authDomain,
@@ -12,3 +11,4 @@ export default function firebaseConfig(data){
     firebase.initializeApp(config);
     return firebase;
 }
+module.exports = firebaseConfig;
