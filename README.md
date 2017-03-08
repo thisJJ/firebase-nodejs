@@ -4,7 +4,7 @@
 
 Get install !!
 ```
-npm install --save firebase-nodejs
+npm install --save firebase-nodejs firebase
 ```
 
 ## Optionals
