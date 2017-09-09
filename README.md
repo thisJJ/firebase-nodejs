@@ -11,17 +11,6 @@ List function update, have a `callback` function
 
 #### Example new version updated.
 
-Before updated : Have a error from return Promise, now edit.
-```js
-firebaseDom.default.selectData(firebase, data_path, 'value');
-```
-
-New version : Remove default path.
-Before :
-```js
-firebaseDom.default.firebaseConfig
-```
-Now :
 ```js
 firebaseDom.firebaseConfig
 ```
@@ -34,13 +23,6 @@ firebaseDom.selectData(firebase, data_path, 'value', callback => {
    });
 });
 ```
-#### Unit test
-```js
-selectData return callback : passed!
-authFacebook return callback : passed!
-authUser return callback : passed!
-```
-
 # Firebase SDK for Node.js
 
 Get install !!
