@@ -9,12 +9,6 @@ List function update, have a `callback` function
 - [x] authFacebook
 - [x] authUser `updateUser` `updateEmail` `sendVerifyEmail` `changePassword` `deleteUser` `logout`
 
-#### Example new version updated.
-
-```js
-firebaseDom.firebaseConfig
-```
-
 New version : Add callback function for return value from firebase query. But can't return out the function, you can use state from push on state.
 ```js
 firebaseDom.selectData(firebase, data_path, 'value', callback => {
